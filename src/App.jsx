@@ -1,12 +1,14 @@
 import './App.css'
 import Header from './components/Header'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Home from './components/pages/Home'
 import AboutUs from './components/pages/AboutUs'
 import Gallery from './components/pages/Gallery'
 import TheProject from './components/pages/TheProject'
 import SignIn from './components/pages/SignIn'
 import SignUp from './components/pages/SignUp'
+
+import ApplicationHome from './components/pages/ApplicationHome'
 
 import Container from './components/Container'
 
@@ -23,6 +25,7 @@ function App() {
           <Route path="/project" element={<TheProject></TheProject>}></Route>
           <Route path="/sign-in" element={<SignIn></SignIn>}></Route>
           <Route path="/sign-up" element={<SignUp></SignUp>}></Route>
+          <Route path="/application/" element={<ApplicationHome></ApplicationHome>}></Route>
         </Container>
       </Router>
     </div>
