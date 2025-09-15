@@ -2,13 +2,16 @@
     margin: 30px;
 }
 
+.page{
+    margin: 30px auto;
+}
+
 .containerTitle{
     background-color: white;
     color: black;
-    width: 400px;
+    width: 38%;
     padding: 10px;
     font-size: 20px;
-    font-weight: bold;
 }
 
 
@@ -30,8 +33,61 @@
     font-weight: bold;
 }
 
-.containerChart{
+.containerCharts{
     background-color: white;
-    height: 500px; 
+    height: fit-content;
     display: flex;
+}
+.containerChart{
+    width: 100%;
+    align-items: center;
+}
+.containerChartTitle{
+    margin: 20px auto;
+    color: black;
+    width: fit-content;
+}
+
+.containerSelectBox{
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    color: black;
+    background-color: white;
+    height: fit-content;
+    width: 100%;
+}
+
+.containerSelectBox>div{
+    width: 30%;
+    margin: 20px auto;
+}
+
+.containerSelectBox div select{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(194, 194, 194);
+}
+
+.KPIs{
+    width: 33%;
+}
+
+.bgComponent{
+    color: black;
+    background-color: white;
+    margin: 20px auto;
+}
+
+.bigData{
+    display: flex;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.bigDataNumber{
+    padding: 0 15px 10px 15px;
+    text-align: center;
+    font-size: 36px;
+    margin: 0 auto;
 }
