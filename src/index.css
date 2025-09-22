@@ -1,7 +1,11 @@
+:root{
+  --bg-color: rgb(0, 0, 19);
+}
+
 body{
   margin: 0 0;
   padding: 0 0;
-  background-color: rgb(0, 0, 19);
+  background-color: var(--bg-color);
 }
 
 #root{
