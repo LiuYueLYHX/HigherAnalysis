@@ -43,38 +43,21 @@ Nosso projeto tem como foco o desenvolvimento de um Dashboard interativo para a 
 Raiz/<br>
 &emsp;├── documentos/<br>
 &emsp;&emsp;├── Entrega 1/<br>
-&emsp;&emsp;&emsp;├── Análise Descritiva de Dados/<br>
-&emsp;&emsp;&emsp;├── Programação Orientada a Objetivos e Estrutura de Dados/<br>
-&emsp;&emsp;&emsp;├── Programação para Dispositivos Móveis/<br>
-&emsp;&emsp;&emsp;└── Projeto Interdisciplinar Aplicativo Móvel/<br>
+&emsp;&emsp;&emsp;├── Análise_Inferencial_de_Dados/<br>
+&emsp;&emsp;&emsp;├── Engenharia_de_Software_e_Arquitetura_de_Sistemas/<br>
+&emsp;&emsp;&emsp;├── Projeto_Interdisciplinar_Ciência_de_Dados/<br>
+&emsp;&emsp;&emsp;└── Contabilidade_e_Finanças/<br>
 &emsp;&emsp;├── Entrega 2/<br>
-&emsp;&emsp;&emsp;├── Análise Descritiva de Dados/<br>
-&emsp;&emsp;&emsp;├── Programação Orientada a Objetivos e Estrutura de Dados/<br>
-&emsp;&emsp;&emsp;├── Programação para Dispositivos Móveis/<br>
-&emsp;&emsp;&emsp;└── Projeto Interdisciplinar Aplicativo Móvel/<br>
-&emsp;&emsp;├── Entrega 3/<br>
-&emsp;&emsp;&emsp;├── Análise Descritiva de Dados/<br>
-&emsp;&emsp;&emsp;├── Programação Orientada a Objetivos e Estrutura de Dados/<br>
-&emsp;&emsp;&emsp;├── Programação para Dispositivos Móveis/<br>
-&emsp;&emsp;&emsp;└── Projeto Interdisciplinar Aplicativo Móvel/<br>
-&emsp;&emsp;├── Entrega 4/<br>
-&emsp;&emsp;&emsp;├── Análise Descritiva de Dados/<br>
-&emsp;&emsp;&emsp;├── Programação Orientada a Objetivos e Estrutura de Dados/<br>
-&emsp;&emsp;&emsp;├── Programação para Dispositivos Móveis/<br>
-&emsp;&emsp;&emsp;└── Projeto Interdisciplinar Aplicativo Móvel/<br>
-&emsp;&emsp;└── README.md<br>
+&emsp;&emsp;&emsp;├── Análise_Inferencial_de_Dados/<br>
+&emsp;&emsp;&emsp;├── Engenharia_de_Software_e_Arquitetura_de_Sistemas/<br>
+&emsp;&emsp;&emsp;├── Projeto_Interdisciplinar_Ciência_de_Dados/<br>
+&emsp;&emsp;&emsp;└── Contabilidade_e_Finanças/<br>
 &emsp;├── imagens/<br>
 &emsp;├── src/<br>
 &emsp;&emsp;├── Entrega 1/<br>
 &emsp;&emsp;&emsp;├── Backend/<br>
 &emsp;&emsp;&emsp;└── Frontend/<br>
 &emsp;&emsp;├── Entrega 2/<br>
-&emsp;&emsp;&emsp;├── Backend/<br>
-&emsp;&emsp;&emsp;└── Frontend/<br>
-&emsp;&emsp;├── Entrega 3/<br>
-&emsp;&emsp;&emsp;├── Backend/<br>
-&emsp;&emsp;&emsp;└── Frontend/<br>
-&emsp;&emsp;└── Entrega 4/<br>
 &emsp;&emsp;&emsp;├── Backend/<br>
 &emsp;&emsp;&emsp;└── Frontend/<br>
 &emsp;├── .gitignore<br>
@@ -95,7 +78,10 @@ Raiz/<br>
 
 
 ## 📋 Licença/License
-
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="[https://github.com/2025-2-NCC4/Projeto3]">Data Analytics</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/2025-1-NCC3/Projeto14">FECAP - Bernardo Seijas Cavalcante, Eduardo Chen Zou, Fabiano Henrique Chou, icolas Roberto Jordan Morales</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Creative Commons Attribution 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p>
 
 ## 🎓 Referências
 
+Aqui estão as referências usadas no projeto.
+
+1. <https://github.com/iuricode/readme-template>
