@@ -1,16 +1,3 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
 
 # FECAP - Fundação de Comércio Álvares Penteado
 
@@ -35,8 +22,9 @@ If you are developing a production application, we recommend using TypeScript wi
 </p>-->
 
 
-Nosso projeto tem como foco o desenvolvimento de um Dashboard interativo para a startup PicMoney, que utiliza tecnologia de realidade aumentada para distribuir cupons de desconto. A proposta é oferecer uma ferramenta estratégica voltada aos principais executivos da empresa — como o CEO e o CFO — reunindo, em um só lugar, os dados mais relevantes das áreas financeira, operacional e estratégica. Na prática, o Dashboard permitirá que cada diretor visualize as informações mais importantes para sua área de atuação de forma clara, objetiva e personalizada. O objetivo final é transformar grandes volumes de dados em insights visuais acessíveis, facilitando a tomada de decisões mais rápidas, inteligentes e baseadas em dados.
-
+Nosso projeto tem como foco o desenvolvimento de um Dashboard interativo para a startup PicMoney, que utiliza tecnologia de realidade aumentada para distribuir cupons de desconto. A proposta é oferecer uma ferramenta estratégica voltada aos principais executivos da empresa — como o CEO e o CFO — reunindo, em um só lugar, os dados mais relevantes das áreas financeira, operacional e estratégica.
+Na prática, o Dashboard permitirá que cada diretor visualize as informações mais importantes para sua área de atuação de forma clara, objetiva e personalizada. Entre os recursos, haverá um botão que permite alternar livremente entre os modos de visualização do CEO e do CFO, adaptando os indicadores exibidos conforme as necessidades e responsabilidades de cada cargo.
+O objetivo final é transformar grandes volumes de dados em insights visuais acessíveis, facilitando uma tomada de decisão mais rápida, inteligente e baseada em dados.
 
 ## 🛠 Estrutura de Pastas
 
@@ -82,6 +70,14 @@ Raiz/<br>
 
 ## 🎓 Referências
 
-Aqui estão as referências usadas no projeto.
+Aqui estão as referências usadas no projeto:
 
-1. <https://github.com/iuricode/readme-template>
+1. [IURICODE - README Template](https://github.com/iuricode/readme-template)  
+   Acesso em: 20 de outubro de 2025.
+
+2. [Vite - React + Vite](https://github.com/vitejs/vite-plugin-react)  
+   Acesso em: 20 de outubro de 2025.
+
+3. [ESLint - The pluggable linting utility for JavaScript and JSX](https://eslint.org/)  
+   Acesso em: 20 de outubro de 2025.
+
