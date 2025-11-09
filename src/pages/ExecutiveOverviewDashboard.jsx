@@ -102,7 +102,7 @@ const estiloTooltip = {
 const ExecutiveOverviewDashboard = () => {
   const { dadosTransacoes, estaCarregando, erro } = useDados();
   
-  // Estado para o filtro Top N do gráfico 15 [cite: 64]
+  // Estado para o filtro Top N do gráfico 15 
   const [topNEstab, setTopNEstab] = useState(10);
 
   // 1. Hook de Filtros

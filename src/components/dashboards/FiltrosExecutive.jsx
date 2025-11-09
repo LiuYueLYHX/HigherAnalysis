@@ -56,7 +56,7 @@ const FiltrosExecutive = ({ filtros, setFiltros, opcoes }) => {
   return (
     <SecaoExpansivel titulo="Filters" comecarAberto={false}>
       <FiltroForm>
-        {/* Filtros de Data e Hora [cite: 21] */}
+        {/* Filtros de Data e Hora */}
         <FiltroGrupo>
           <label htmlFor="dataInicio">Start Date</label>
           <input type="date" name="dataInicio" value={filtros.dataInicio} onChange={handleChange} />
@@ -74,12 +74,12 @@ const FiltrosExecutive = ({ filtros, setFiltros, opcoes }) => {
           <input type="time" name="horaFim" value={filtros.horaFim} onChange={handleChange} />
         </FiltroGrupo>
 
-        {/* Filtros de Estabelecimento [cite: 21] */}
+        {/* Filtros de Estabelecimento */}
         {renderizarSelect('estabelecimento', 'Establishment', opcoes.estabelecimentos)}
         {renderizarSelect('bairroEstabelecimento', 'Establishment Neighborhood', opcoes.bairrosEstabelecimento)}
         {renderizarSelect('categoriaEstabelecimento', 'Establishment Category', opcoes.categoriasEstabelecimento)}
         
-        {/* Filtros de Cupom e Campanha [cite: 21] */}
+        {/* Filtros de Cupom e Campanha */}
         {renderizarSelect('idCampanha', 'Campaign ID', opcoes.campanhas)}
         {renderizarSelect('tipoCupom', 'Coupon Type', opcoes.tiposCupom)}
         <FiltroGrupo>
@@ -99,7 +99,7 @@ const FiltrosExecutive = ({ filtros, setFiltros, opcoes }) => {
           <input type="number" name="repasseMax" value={filtros.repasseMax} onChange={handleChange} />
         </FiltroGrupo>
 
-        {/* Filtros de Usuário [cite: 22] */}
+        {/* Filtros de Usuário */}
         <FiltroGrupo>
           <label htmlFor="idadeMin">Min Age</label>
           <input type="number" name="idadeMin" value={filtros.idadeMin} onChange={handleChange} />

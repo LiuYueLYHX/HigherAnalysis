@@ -21,8 +21,14 @@ const agruparPor = (array, chave) => {
  * @returns {number} - A média.
  */
 const calcularMedia = (array, chave) => {
-  if (!array || array.length === 0) return 0;
-  const soma = array.reduce((acc, obj) => acc + (obj[chave] || 0), 0);
+  if (!array || array.length === 0){
+    return 0;
+  } 
+  console.log(chave)
+  console.log("Length: " + array.length);
+
+  const soma = array.reduce((acc, obj) =>  acc + (obj[chave] || 0), 0);
+  console.log(soma + " " + array.length + " " + soma / array.length);
   return soma / array.length;
 };
 
@@ -38,7 +44,7 @@ const calcularSoma = (array, chave) => {
 };
 
 /**
- * Define a faixa etária com base na idade. [Ref: cite: 53-54]
+ * Define a faixa etária com base na idade.
  * @param {number} idade - A idade do usuário.
  * @returns {string} - A faixa etária.
  */
@@ -58,7 +64,7 @@ export const calcularMetricasExecutive = (dados) => {
     return { kpis: {}, chartData: {} };
   }
 
-  // --- 1. Cálculo dos KPIs [cite: 31-46] ---
+  // --- 1. Cálculo dos KPIs ---
 
   const totalCupons = dados.length;
   const valorTotalMovimentado = calcularSoma(dados, 'Repasse');
@@ -121,7 +127,7 @@ export const calcularMetricasExecutive = (dados) => {
 
   const chartData = {};
 
-  // Gráfico 1: Categoria x Idade Média [cite: 48]
+  // Gráfico 1: Categoria x Idade Média 
   const agrupadoCategoriaFreq = agruparPor(dados, 'Categoria_Frequenteada');
   chartData.chartCategoriaIdade = Object.entries(agrupadoCategoriaFreq)
     .map(([categoria, arr]) => ({
@@ -130,7 +136,7 @@ export const calcularMetricasExecutive = (dados) => {
     }))
     .sort((a, b) => b['Average Age'] - a['Average Age']);
 
-  // Gráfico 2: Distribuição de Sexo por Categoria [cite: 49]
+  // Gráfico 2: Distribuição de Sexo por Categoria 
   chartData.chartSexoCategoria = Object.entries(agrupadoCategoriaFreq)
     .map(([categoria, arr]) => ({
       name: categoria,
@@ -138,7 +144,7 @@ export const calcularMetricasExecutive = (dados) => {
       Female: arr.filter(d => d.Sexo === 'Feminino').length,
     }));
 
-  // Gráfico 3 e 4: Transações por Cidade e Bairro [cite: 50, 51]
+  // Gráfico 3 e 4: Transações por Cidade e Bairro 
   const agruparContagem = (chave) => {
     const contagem = dados.reduce((acc, d) => {
         const valorChave = d[chave] || 'N/A';
@@ -152,7 +158,7 @@ export const calcularMetricasExecutive = (dados) => {
   chartData.chartTransacoesCidade = agruparContagem('Cidade_Residencial');
   chartData.chartTransacoesBairro = agruparContagem('Bairro_Residencial');
 
-  // Gráfico 5: Transações por Trabalho/Estudo [cite: 52]
+  // Gráfico 5: Transações por Trabalho/Estudo
   const trabalhaApenas = dados.filter(d => d.Cidade_Trabalho !== 'Não tem' && d.Cidade_Escola === 'Não tem').length;
   const estudaApenas = dados.filter(d => d.Cidade_Trabalho === 'Não tem' && d.Cidade_Escola !== 'Não tem').length;
   const trabalhaEEstuda = dados.filter(d => d.Cidade_Trabalho !== 'Não tem' && d.Cidade_Escola !== 'Não tem').length;
@@ -162,7 +168,7 @@ export const calcularMetricasExecutive = (dados) => {
       { name: 'Works and Studies', value: trabalhaEEstuda },
   ];
 
-  // Gráfico 6 e 7: Transações por Faixa Etária por Cidade/Bairro [cite: 53, 54]
+  // Gráfico 6 e 7: Transações por Faixa Etária por Cidade/Bairro 
   const faixas = ['0-17', '18-24', '25-34', '35-44', '45-59', '60+'];
   const agregarPorFaixaEtaria = (chaveAgrupamento) => {
       const grupos = agruparPor(dados, chaveAgrupamento);
@@ -179,7 +185,7 @@ export const calcularMetricasExecutive = (dados) => {
   chartData.chartFaixaEtariaBairro = agregarPorFaixaEtaria('Bairro_Residencial');
   chartData.faixasEtarias = faixas; // Para as legendas
 
-  // Gráfico 8, 9, 10: Categorias mais frequentadas por Atividade [cite: 57, 58, 59]
+  // Gráfico 8, 9, 10: Categorias mais frequentadas por Atividade
   const filtrarEContarCategoria = (filtro) => {
       const dadosFiltrados = dados.filter(filtro);
       return agruparContagem.call({dados: dadosFiltrados}, 'Categoria_Frequenteada');
@@ -188,7 +194,7 @@ export const calcularMetricasExecutive = (dados) => {
   chartData.chartCatSoloEstuda = filtrarEContarCategoria(d => d.Cidade_Trabalho === 'Não tem' && d.Cidade_Escola !== 'Não tem');
   chartData.chartCatTrabalhaEstuda = filtrarEContarCategoria(d => d.Cidade_Trabalho !== 'Não tem' && d.Cidade_Escola !== 'Não tem');
 
-  // Gráfico 11: Bairros mais rentáveis (Repasse) [cite: 60]
+  // Gráfico 11: Bairros mais rentáveis (Repasse)
   const agrupadoBairroEstab = agruparPor(dados, 'Bairro_Estabelecimento');
   chartData.chartBairrosRentaveis = Object.entries(agrupadoBairroEstab)
     .map(([name, arr]) => ({
@@ -197,12 +203,12 @@ export const calcularMetricasExecutive = (dados) => {
     }))
     .sort((a, b) => b.Revenue - a.Revenue);
 
-  // Gráfico 12: Transações por Tipo de Cupom [cite: 61]
+  // Gráfico 12: Transações por Tipo de Cupom
   const agrupadoTipoCupom = agruparPor(dados, 'Tipo_Cupom');
   chartData.chartTipoCupom = Object.entries(agrupadoTipoCupom)
     .map(([name, arr]) => ({ name, value: arr.length }));
     
-  // Gráfico 13: Valor de Cupom por Categoria Estabelecimento [cite: 62]
+  // Gráfico 13: Valor de Cupom por Categoria Estabelecimento 
   const agrupadoCatEstab = agruparPor(dados, 'Categoria_Estabelecimento');
   chartData.chartValorCupomCategoria = Object.entries(agrupadoCatEstab)
     .map(([name, arr]) => ({
@@ -211,7 +217,7 @@ export const calcularMetricasExecutive = (dados) => {
     }))
     .sort((a, b) => b.CouponValue - a.CouponValue);
 
-  // Gráfico 14: Cupons (empilhados por tipo) por Bairro Estabelecimento [cite: 63]
+  // Gráfico 14: Cupons (empilhados por tipo) por Bairro Estabelecimento
   chartData.chartTiposCupomBairro = Object.entries(agrupadoBairroEstab)
     .map(([name, arr]) => {
       const tipos = agruparPor(arr, 'Tipo_Cupom');
@@ -223,7 +229,7 @@ export const calcularMetricasExecutive = (dados) => {
     });
   chartData.tiposDeCupom = [...new Set(dados.map(d => d.Tipo_Cupom).filter(Boolean))];
 
-  // Gráfico 15: Rentabilidade (Repasse) por Estabelecimento [cite: 64]
+  // Gráfico 15: Rentabilidade (Repasse) por Estabelecimento 
   const agrupadoEstab = agruparPor(dados, 'Nome_Estabelecimento');
   chartData.chartRentabilidadeEstab = Object.entries(agrupadoEstab)
     .map(([name, arr]) => ({
@@ -232,7 +238,7 @@ export const calcularMetricasExecutive = (dados) => {
     }))
     .sort((a, b) => b.Revenue - a.Revenue);
 
-  // Gráfico 16: Transações por Hora do Dia [cite: 65]
+  // Gráfico 16: Transações por Hora do Dia
   const agrupadoHora = dados.reduce((acc, d) => {
     const hora = d.Hora ? d.Hora.split(':')[0] : 'N/A';
     acc[hora] = (acc[hora] || 0) + 1;
@@ -242,7 +248,7 @@ export const calcularMetricasExecutive = (dados) => {
     .map(([name, Transactions]) => ({ name: `${name}:00`, Transactions }))
     .sort((a, b) => parseInt(a.name) - parseInt(b.name));
     
-  // Gráfico 17: Ranking de Campanhas [cite: 66]
+  // Gráfico 17: Ranking de Campanhas
   chartData.chartRankingCampanhas = agruparContagem('Id_Campanha');
 
   return { kpis, chartData };
