@@ -6,6 +6,13 @@ import GlobalStyles from './styles/GlobalStyles';
 import ExecutiveOverviewDashboard from './pages/ExecutiveOverviewDashboard';
 import FinancialPerformanceDashboard from './pages/FinancialPerformanceDashboard';
 import Header from './components/core/Header';
+import styled from 'styled-components';
+
+// Novo container para centralizar o conteúdo principal
+const LayoutContainer = styled.div`
+  max-width: 1600px;
+  margin: 0 auto;
+`;
 
 function App() {
   return (
@@ -14,14 +21,15 @@ function App() {
         <DadosProvider>
           <GlobalStyles />
           <Header />
-          <main>
-            <Routes>
-              {/* Rota padrão redireciona para o dashboard do CEO */}
-              <Route path="/" element={<Navigate to="/executive-overview" />} />
-              <Route path="/executive-overview" element={<ExecutiveOverviewDashboard />} />
-              <Route path="/financial-performance" element={<FinancialPerformanceDashboard />} />
-            </Routes>
-          </main>
+          <LayoutContainer>
+            <main>
+              <Routes>
+                <Route path="/" element={<Navigate to="/executive-overview" />} />
+                <Route path="/executive-overview" element={<ExecutiveOverviewDashboard />} />
+                <Route path="/financial-performance" element={<FinancialPerformanceDashboard />} />
+              </Routes>
+            </main>
+          </LayoutContainer>
         </DadosProvider>
       </TemaProvider>
     </Router>
