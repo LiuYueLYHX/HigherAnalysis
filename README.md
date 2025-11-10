@@ -5,9 +5,10 @@
 <a href= "https://www.fecap.br/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhZPrRa89Kma0ZZogxm0pi-tCn_TLKeHGVxywp-LXAFGR3B1DPouAJYHgKZGV0XTEf4AE&usqp=CAU" alt="FECAP - Fundação de Comércio Álvares Penteado" border="0"></a>
 </p>
 
-# Data Analytics 
+#  HigherAnalysis
 
-## Grupo 3
+
+## Data Analytics
 
 ## Integrantes: <a href="https://github.com/BernardoSeijasCavalcante">Bernardo Seijas Cavalcante</a>, <a href="https://www.linkedin.com/in/eduardo-chen-zou-637443292/">Eduardo Chen Zou</a>, <a href="https://github.com/FabianoChou">Fabiano Henrique Chou</a>, <a href="https://github.com/Nicolasrjm">Nicolas Roberto Jordan Morales</a>
 
@@ -51,16 +52,9 @@ Raiz/<br>
 &emsp;├── .gitignore<br>
 &emsp;└── README.md<br>
 
-## 📦 Versões / Lançamentos
 
-| Versão | Data | Descrição | Link |
-|--------|------|-----------|------|
-
-
-> ℹ️ Todas as versões estão disponíveis na aba [Releases](https://github.com/orgs/2025-2-NCC4/teams/grupo3).
-
-## 🛠 Instalação
-
+## 🛠 Link de Dados
+<a href="https://higher-analysis.vercel.app/executive-overview">HigherAnalysis<a>
 
 ## 💻 Configuração para Desenvolvimento
 Este projeto foi desenvolvido utilizando Visual Studio Code (VS Code)
