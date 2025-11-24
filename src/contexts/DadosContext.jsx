@@ -8,6 +8,7 @@ export const DadosProvider = ({ children }) => {
   const [dadosFinanceiros, setDadosFinanceiros] = useState([]);
   const [estaCarregando, setEstaCarregando] = useState(false);
   const [erro, setErro] = useState(null);
+  const [modoSimulacao, setModoSimulacao] = useState(false);
 
   // Função para carregar e processar os arquivos
   const carregarDados = async (arquivosTransacoes, arquivosFinanceiros) => {
@@ -28,13 +29,48 @@ export const DadosProvider = ({ children }) => {
     }
   };
 
+  const carregarDadosSimulados = (transacoesSimuladas, financeiroSimulado) => {
+    setEstaCarregando(true);
+    setErro(null);
+    try {
+      // Como a IA já devolve no formato de chaves correto (instruído no prompt),
+      // apenas garantimos a tipagem correta de campos críticos
+      
+      const transacoesFormatadas = transacoesSimuladas.map(d => ({
+        ...d,
+        Repasse: Number(d.Repasse) || 0,
+        Valor_Cupom: Number(d.Valor_Cupom) || 0,
+        Idade: Number(d.Idade) || 0,
+        Tempo_Aplic: Number(d.Tempo_Aplic) || 0
+      }));
+
+      const financeiroFormatado = financeiroSimulado.map(d => ({
+        ...d,
+        Valor_Total: Number(d.Valor_Total) || 0
+      }));
+
+      setDadosTransacoes(transacoesFormatadas);
+      setDadosFinanceiros(financeiroFormatado);
+      setModoSimulacao(true); // Ativa flag visual de simulação
+      
+    } catch (e) {
+      setErro('Erro ao processar dados simulados.');
+      console.error(e);
+    } finally {
+      setEstaCarregando(false);
+    }
+  };
+
   const value = {
     dadosTransacoes,
     dadosFinanceiros,
     estaCarregando,
     erro,
     carregarDados,
+    carregarDadosSimulados, // Exporta a nova função
+    modoSimulacao // Exporta o estado
   };
+
 
   return <DadosContext.Provider value={value}>{children}</DadosContext.Provider>;
 };

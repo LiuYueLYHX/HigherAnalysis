@@ -5,6 +5,7 @@ import { DadosProvider } from './contexts/DadosContext';
 import GlobalStyles from './styles/GlobalStyles';
 import ExecutiveOverviewDashboard from './pages/ExecutiveOverviewDashboard';
 import FinancialPerformanceDashboard from './pages/FinancialPerformanceDashboard';
+import InnovationLab from './pages/InnovationLab'; 
 import Header from './components/core/Header';
 import styled from 'styled-components';
 
@@ -27,6 +28,7 @@ function App() {
                 <Route path="/" element={<Navigate to="/executive-overview" />} />
                 <Route path="/executive-overview" element={<ExecutiveOverviewDashboard />} />
                 <Route path="/financial-performance" element={<FinancialPerformanceDashboard />} />
+                <Route path="/innovation-lab" element={<InnovationLab />} />
               </Routes>
             </main>
           </LayoutContainer>

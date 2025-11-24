@@ -73,6 +73,7 @@ const Header = () => {
       <Nav>
         <StyledNavLink to="/executive-overview">Executive Overview</StyledNavLink>
         <StyledNavLink to="/financial-performance">Financial Performance</StyledNavLink>
+        <StyledNavLink to="/innovation-lab">Innovation Lab</StyledNavLink>
       </Nav>
       <BotaoTema onClick={alternarTema}>
         Tema {nomeTema === 'claro' ? 'Escuro' : 'Claro'}
