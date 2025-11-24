@@ -22,6 +22,7 @@ const FiltroGrupo = styled.div`
     text-transform: uppercase;
   }
 
+  
   input {
     font-size: 1rem;
     padding: 0.5rem;
